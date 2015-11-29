@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +29,20 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)signUpButtonDidPress:(id)sender {
+    
+    PFUser *user = [PFUser user];
+    user.username = self.usernameTextField.text;
+    user.password = self.passwordTextField.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // Hooray! Let them use the app now.
+            NSLog(@"user creation success");
+        } else {
+            NSString *errorString = [error userInfo][@"error"];
+            // Show the errorString somewhere and let the user try again.
+        }
+    }];
 }
 
 /*
