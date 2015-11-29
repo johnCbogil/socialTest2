@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -22,6 +24,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)signUpButtonDidPress:(id)sender {
+}
+- (IBAction)loginButtonDidPress:(id)sender {
 }
 
 @end

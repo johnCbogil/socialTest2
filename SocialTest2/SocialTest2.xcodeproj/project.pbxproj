@@ -13,6 +13,9 @@
 		52E019DF1C0BBC1E0090788F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E019DD1C0BBC1E0090788F /* Main.storyboard */; };
 		52E019E11C0BBC1E0090788F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E019E01C0BBC1E0090788F /* Assets.xcassets */; };
 		52E019E41C0BBC1E0090788F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E019E21C0BBC1E0090788F /* LaunchScreen.storyboard */; };
+		52E019ED1C0BBEC50090788F /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E019EC1C0BBEC50090788F /* SignUpViewController.m */; };
+		52E019F01C0BBED10090788F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E019EF1C0BBED10090788F /* LoginViewController.m */; };
+		52E019F31C0BBEDB0090788F /* NotifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E019F21C0BBEDB0090788F /* NotifyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		52E019E01C0BBC1E0090788F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E019E31C0BBC1E0090788F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E019E51C0BBC1E0090788F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E019EB1C0BBEC50090788F /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		52E019EC1C0BBEC50090788F /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		52E019EE1C0BBED10090788F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		52E019EF1C0BBED10090788F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		52E019F11C0BBEDB0090788F /* NotifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyViewController.h; sourceTree = "<group>"; };
+		52E019F21C0BBEDB0090788F /* NotifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,12 @@
 				52E019DA1C0BBC1E0090788F /* HomeViewController.h */,
 				52E019DB1C0BBC1E0090788F /* HomeViewController.m */,
 				52E019DD1C0BBC1E0090788F /* Main.storyboard */,
+				52E019EE1C0BBED10090788F /* LoginViewController.h */,
+				52E019EF1C0BBED10090788F /* LoginViewController.m */,
+				52E019F11C0BBEDB0090788F /* NotifyViewController.h */,
+				52E019F21C0BBEDB0090788F /* NotifyViewController.m */,
+				52E019EB1C0BBEC50090788F /* SignUpViewController.h */,
+				52E019EC1C0BBEC50090788F /* SignUpViewController.m */,
 				52E019E01C0BBC1E0090788F /* Assets.xcassets */,
 				52E019E21C0BBC1E0090788F /* LaunchScreen.storyboard */,
 				52E019E51C0BBC1E0090788F /* Info.plist */,
@@ -151,7 +166,10 @@
 			files = (
 				52E019DC1C0BBC1E0090788F /* HomeViewController.m in Sources */,
 				52E019D91C0BBC1E0090788F /* AppDelegate.m in Sources */,
+				52E019ED1C0BBEC50090788F /* SignUpViewController.m in Sources */,
+				52E019F31C0BBEDB0090788F /* NotifyViewController.m in Sources */,
 				52E019D61C0BBC1E0090788F /* main.m in Sources */,
+				52E019F01C0BBED10090788F /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
