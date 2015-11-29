@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "NotifyViewController.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -29,16 +29,30 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loginButtonDidPress:(id)sender {
+    [PFUser logInWithUsernameInBackground:self.usernameTextField.text password:self.passwordTextField.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            // Do stuff after successful login.
+                                            NSLog(@"login success");
+                                            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                                            NotifyViewController *notifyViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"notifyViewController"];
+                                            [self.navigationController pushViewController:notifyViewController animated:YES];
+                                            
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                            NSLog(@"Login failure");
+                                        }
+                                    }];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SignUpViewController.h"
+#import "NotifyViewController.h"
 
 @interface SignUpViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
@@ -38,8 +39,11 @@
         if (!error) {
             // Hooray! Let them use the app now.
             NSLog(@"user creation success");
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            NotifyViewController *notifyViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"notifyViewController"];
+            [self.navigationController pushViewController:notifyViewController animated:YES];
         } else {
-            NSString *errorString = [error userInfo][@"error"];
+          //  NSString *errorString = [error userInfo][@"error"];
             // Show the errorString somewhere and let the user try again.
         }
     }];

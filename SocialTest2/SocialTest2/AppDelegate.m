@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NotifyViewController.h"
+#import "HomeViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,22 @@
     [Parse setApplicationId:@"oc4TFxbR9iLywWweTGRWVEWx3O9spT5kf93P5mvo"
                   clientKey:@"95mVAuMKc9Ye8ksYNPh973p8w4ZAwF79lWeHoRIc"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+        NotifyViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"notifyViewController"];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        self.window.rootViewController = navController;
+    } else {
+        // show the signup or login screen
+        HomeViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"homeViewController"];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        self.window.rootViewController = navController;
+    }
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
