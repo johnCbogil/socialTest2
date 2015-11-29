@@ -9,7 +9,9 @@
 #import "NotifyViewController.h"
 
 @interface NotifyViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *notifyButton;
+@property (weak, nonatomic) IBOutlet UILabel *userToNotifyLabel;
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @end
 
 @implementation NotifyViewController
@@ -34,5 +36,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)notifyButtonDidPress:(id)sender {
+}
 
 @end
