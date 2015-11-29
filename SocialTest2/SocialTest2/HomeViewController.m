@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  HomeViewController.m
 //  SocialTest2
 //
 //  Created by John Bogil on 11/29/15.
 //  Copyright © 2015 John Bogil. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeViewController.h"
 
-@interface ViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
