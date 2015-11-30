@@ -12,14 +12,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *notifyButton;
 @property (weak, nonatomic) IBOutlet UILabel *userToNotifyLabel;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @end
 
 @implementation NotifyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     self.title = [PFUser currentUser].username;
+    self.navigationItem.hidesBackButton = YES;
     
     PFInstallation *installation = [PFInstallation currentInstallation];
     installation[@"User"] = [PFUser currentUser].username;
@@ -41,6 +43,7 @@
 }
 */
 - (IBAction)notifyButtonDidPress:(id)sender {
+    
     // Create our Installation query
     PFQuery *pushQuery = [PFInstallation query];
     [pushQuery whereKey:@"User" equalTo:self.usernameTextField.text];
@@ -48,9 +51,11 @@
     // Send push notification to query
     PFPush *push = [[PFPush alloc] init];
     [push setQuery:pushQuery]; // Set our Installation query
-    [push setMessage:@"Willie Hayes injured by own pop fly."];
+    [push setMessage:@"🙏"];
     [push sendPushInBackground];
-
 }
-
+- (IBAction)logoutButtonDidPress:(id)sender {
+    [PFUser logOut];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
