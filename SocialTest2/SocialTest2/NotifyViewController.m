@@ -20,6 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = [PFUser currentUser].username;
+    
+    PFInstallation *installation = [PFInstallation currentInstallation];
+    installation[@"User"] = [PFUser currentUser].username;
+    [installation saveInBackground];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +41,16 @@
 }
 */
 - (IBAction)notifyButtonDidPress:(id)sender {
+    // Create our Installation query
+    PFQuery *pushQuery = [PFInstallation query];
+    [pushQuery whereKey:@"User" equalTo:self.usernameTextField.text];
+    
+    // Send push notification to query
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:pushQuery]; // Set our Installation query
+    [push setMessage:@"Willie Hayes injured by own pop fly."];
+    [push sendPushInBackground];
+
 }
 
 @end
