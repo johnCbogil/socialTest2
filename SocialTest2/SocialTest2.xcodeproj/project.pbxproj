@@ -93,22 +93,9 @@
 		52E019C81C0BBC1E0090788F = {
 			isa = PBXGroup;
 			children = (
-				52E01A0E1C0BC1860090788F /* libsqlite3.tbd */,
-				52E01A0C1C0BC17A0090788F /* libz.tbd */,
 				52E019D31C0BBC1E0090788F /* SocialTest2 */,
 				52E019D21C0BBC1E0090788F /* Products */,
-				52E01A0A1C0BC16F0090788F /* SystemConfiguration.framework */,
-				52E01A081C0BC15C0090788F /* StoreKit.framework */,
-				52E01A061C0BC1520090788F /* Social.framework */,
-				52E01A041C0BC14D0090788F /* Security.framework */,
-				52E01A021C0BC1450090788F /* QuartzCore.framework */,
-				52E019FE1C0BC13F0090788F /* CoreGraphics.framework */,
-				52E019FF1C0BC13F0090788F /* CoreLocation.framework */,
-				52E019F81C0BC1330090788F /* Accounts.framework */,
-				52E019F91C0BC1330090788F /* AudioToolbox.framework */,
-				52E019FA1C0BC1330090788F /* CFNetwork.framework */,
-				52E019F41C0BC1120090788F /* Bolts.framework */,
-				52E019F51C0BC1120090788F /* Parse.framework */,
+				52E01A101C0BC9230090788F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +137,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		52E01A101C0BC9230090788F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52E01A0E1C0BC1860090788F /* libsqlite3.tbd */,
+				52E01A0C1C0BC17A0090788F /* libz.tbd */,
+				52E01A0A1C0BC16F0090788F /* SystemConfiguration.framework */,
+				52E01A081C0BC15C0090788F /* StoreKit.framework */,
+				52E01A061C0BC1520090788F /* Social.framework */,
+				52E01A041C0BC14D0090788F /* Security.framework */,
+				52E01A021C0BC1450090788F /* QuartzCore.framework */,
+				52E019FE1C0BC13F0090788F /* CoreGraphics.framework */,
+				52E019FF1C0BC13F0090788F /* CoreLocation.framework */,
+				52E019F81C0BC1330090788F /* Accounts.framework */,
+				52E019F91C0BC1330090788F /* AudioToolbox.framework */,
+				52E019FA1C0BC1330090788F /* CFNetwork.framework */,
+				52E019F41C0BC1120090788F /* Bolts.framework */,
+				52E019F51C0BC1120090788F /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +189,7 @@
 				TargetAttributes = {
 					52E019D01C0BBC1E0090788F = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4Y3GGL46D2;
 					};
 				};
 			};
@@ -268,6 +277,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -312,6 +322,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -337,6 +348,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -345,6 +358,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = johnbogil.SocialTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -352,6 +366,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -360,6 +376,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = johnbogil.SocialTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -382,6 +399,7 @@
 				52E019EA1C0BBC1E0090788F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
